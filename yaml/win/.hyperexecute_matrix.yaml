@@ -8,7 +8,6 @@ matrix:
   files: ["test_app.py"]
 runson: ${matrix.os}
 pre:
-  - npm install playwright --save-exact
   - pip install -r requirement.txt --cache-dir CacheDir
   - playwright install
 cacheKey: '{{ checksum "requirement.txt" }}'

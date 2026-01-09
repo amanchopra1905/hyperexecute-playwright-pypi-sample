@@ -8,7 +8,6 @@ matrix:
   files: ["test_app.py"]
 runson: ${matrix.os}
 pre:
-  - npm install playwright --save-exact
   - pip3 install -r requirement.txt --cache-dir CacheDir
   - npx playwright install
   - pip3 install pytest==7.2.1
